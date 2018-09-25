@@ -1,0 +1,340 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*
+  ========================================
+  Custom styles
+  ========================================
+*/
+
+body {
+    font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+    color: #777777;
+    background-image: url(../images/connectwork.png);
+}
+
+h2 {
+    color: #4AAAA5;
+    padding-bottom: 20px;
+    padding-top: 10px;
+    font-weight: bold;
+    border-bottom: 1px solid #cccccc;
+    margin-bottom: 20px;
+}
+
+.header-container, .hero, .primary-footer {
+    width: 960px;
+    margin: 0 auto;
+}
+
+header {
+    background: #fff;
+    font-family: 'Georgia', Times, 'Times New Roman', serif;
+    border-bottom: 1px solid #cccccc;
+}
+
+
+*,
+*:before,
+*:after {
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	    	box-sizing: border-box;
+}
+
+.logo {
+    background: #4AAAA5;
+    padding: 30px;
+    color: #fff;
+    float: left;
+    font-weight: 900;
+    font-size: 24px;
+}
+
+.logo:hover {
+    color: #4AAAA5;
+    background: #fff;
+}
+
+.primary-nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-align: center;
+}
+
+.primary-nav li {
+    float: right;
+    padding: 34px 0 33px 30px;
+}
+
+.primary-nav a {
+    text-align: center;
+    display: block;
+    text-decoration: none;
+}
+
+.primary-nav li a:hover {
+    color: #4AAAA5;
+}
+
+.primary-nav a:visited {
+    color: #777777;
+}
+
+/*
+  ==================================
+  Main Section
+  ==================================
+*/
+
+.container {
+    font-size: 18px;
+    clear: both;
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+.hero {
+    margin: 0 auto;
+    background: #fff;
+    padding: 25px;
+    border: 1px solid #dddddd;
+}
+
+.hero p {
+    line-height: 1.8;
+}
+
+.profile-pic {
+    float: left;
+    margin-right: 15px; 
+    width: 150px;
+    height: 150px;
+}
+
+/*
+ ==========================
+ Footer
+ ==========================
+*/
+
+footer {
+    border-top: 5px solid #4AAAA5;
+}
+
+.primary-footer {
+    color: #fff;
+    padding-top: 20px;
+    text-align: center;
+    background: #666666;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    font-size: small;
+}
+
+/*
+  ==========================
+  Portfolio
+  =========================
+*/
+
+.column img {
+    width: 302px;
+    height: 200px;
+}
+
+.column {
+  float: left;
+  width: 33.30%;
+  position: relative;
+  margin-right: 20px;
+}
+
+
+/* Clear floats after the columns */
+.grid:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.grid {
+    margin-bottom: 50px;
+}
+
+#last {
+    margin-bottom: 0;
+}
+
+.desc {
+    position: absolute;
+    bottom: 15px;
+    padding: 15px;
+    background: #4AAAA5;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+}
+
+.image {
+    display: block;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #4AAAA5;
+}
+
+.column:hover .overlay {
+    opacity: 1;
+}
+
+.text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.form-group input {
+    background: none;
+    border: none;
+    width: 100%;
+    height: 100%;
+    padding: 15px 8px 5px;
+    border-bottom: 2px solid #ddd;
+    color: transparent; /* makes the cursor and text visible */
+    font-size: 16px;
+    outline: none; /* remove browser field outlines on focus */
+    -webkit-appearance: none; /* prevent browser field styling */
+    -moz-appearance: none;
+}
+
+.form-group label {
+    font-size: 16px;
+    opacity: .7;
+    height: 20px;
+    font-family: sans-serif;
+    color: #666;
+    cursor: text;
+    /* this makes it so the label moves up and down smoothly */
+    transition: 
+        font-size .3s ease,
+        bottom .3s ease,
+        opacity .3s ease,
+        left .3s ease;
+}
+
+/* makes field color visible on focus and blur if there is typed text */
+.form-group input:focus, .form-group input.blurred {
+    color: #222;
+    border-color: #206594;
+}
+
+.form-group input:focus {
+    transition:
+        color 0s 0.2s, /* the text color of text and cursor shows up mid label transition */
+        border-color .3s
+}
+
+/* keeps label up when on focus and blur if there is typed text */
+.form-group input:focus + label, .form-group input.blurred + label {
+    font-size: 12px;
+    bottom: 25px;
+    left: 0;
+    opacity: .3;
+}
+
+.textdec {
+    width: 100%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    resize: none;
+}
+
+.textdec:focus {
+    border: 1px solid #206594;
+}
+
+.textdec::placeholder {
+    color: #666;
+    opacity: .7;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #666;
+    opacity: .7;
+ }
+ 
+ ::-ms-input-placeholder { /* Microsoft Edge */
+    color: #666;
+    opacity: .7;
+ }
